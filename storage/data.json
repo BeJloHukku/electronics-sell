@@ -42,14 +42,14 @@
       "client_id": 1,
       "received_at": "2026-10-31T12:00:00+03:00",
       "delivery_address_id": 1,
-      "status": "new"
+      "status": "confirmed"
     },
     {
       "request_id": 102,
       "client_id": 1,
       "received_at": "2026-10-31T12:00:00+03:00",
       "delivery_address_id": 1,
-      "status": "new"
+      "status": "rejected"
     },
     {
       "request_id": 103,
@@ -63,7 +63,7 @@
       "client_id": 1,
       "received_at": "2026-10-31T12:00:00+03:00",
       "delivery_address_id": 1,
-      "status": "new"
+      "status": "awaiting_price"
     }
   ],
   "request_items": [
@@ -153,13 +153,13 @@
   "stocks": [
     {
       "product_id": 1,
-      "available_quantity": 3,
-      "updated_at": "2026-10-31T12:00:00+03:00"
+      "available_quantity": 2,
+      "updated_at": "2026-11-01T08:57:32.902943+00:00"
     },
     {
       "product_id": 2,
-      "available_quantity": 5,
-      "updated_at": "2026-10-31T12:00:00+03:00"
+      "available_quantity": 3,
+      "updated_at": "2026-11-01T08:57:32.902943+00:00"
     },
     {
       "product_id": 3,
@@ -172,9 +172,69 @@
       "updated_at": "2026-10-31T12:00:00+03:00"
     }
   ],
-  "orders": [],
-  "order_items": [],
-  "reservations": [],
+  "orders": [
+    {
+      "order_id": 1,
+      "request_id": 101,
+      "status": "confirmed",
+      "created_at": "2026-11-01T08:57:32.902943+00:00",
+      "updated_at": "2026-11-01T08:57:32.902943+00:00"
+    },
+    {
+      "order_id": 2,
+      "request_id": 102,
+      "status": "rejected",
+      "created_at": "2026-11-01T08:58:04.953885+00:00",
+      "updated_at": "2026-11-01T08:58:04.953885+00:00"
+    },
+    {
+      "order_id": 3,
+      "request_id": 104,
+      "status": "awaiting_price",
+      "created_at": "2026-11-01T08:58:21.615551+00:00",
+      "updated_at": "2026-11-01T08:58:21.615551+00:00"
+    }
+  ],
+  "order_items": [
+    {
+      "order_item_id": 1,
+      "order_id": 1,
+      "request_item_id": 1,
+      "price": 4999000
+    },
+    {
+      "order_item_id": 2,
+      "order_id": 1,
+      "request_item_id": 2,
+      "price": 749000
+    },
+    {
+      "order_item_id": 3,
+      "order_id": 2,
+      "request_item_id": 3,
+      "price": null
+    },
+    {
+      "order_item_id": 4,
+      "order_id": 3,
+      "request_item_id": 5,
+      "price": null
+    }
+  ],
+  "reservations": [
+    {
+      "reservation_id": 1,
+      "order_item_id": 1,
+      "reserved_quantity": 1,
+      "reserved_at": "2026-11-01T08:57:32.902943+00:00"
+    },
+    {
+      "reservation_id": 2,
+      "order_item_id": 2,
+      "reserved_quantity": 2,
+      "reserved_at": "2026-11-01T08:57:32.902943+00:00"
+    }
+  ],
   "check_types": [
     {
       "check_type_id": 1,
@@ -210,6 +270,105 @@
       "is_passed": false,
       "message": "Не заполнено поле last_name. Не заполнено поле contact.",
       "checked_at": "2026-11-01T08:55:21.070332+00:00"
+    },
+    {
+      "check_result_id": 3,
+      "request_id": 101,
+      "check_type_id": 1,
+      "order_item_id": null,
+      "is_passed": true,
+      "message": "Данные заявки заполнены.",
+      "checked_at": "2026-11-01T08:57:32.902943+00:00"
+    },
+    {
+      "check_result_id": 4,
+      "request_id": null,
+      "check_type_id": 2,
+      "order_item_id": 1,
+      "is_passed": true,
+      "message": "Товар 1 доступен в нужном количестве.",
+      "checked_at": "2026-11-01T08:57:32.902943+00:00"
+    },
+    {
+      "check_result_id": 5,
+      "request_id": null,
+      "check_type_id": 2,
+      "order_item_id": 2,
+      "is_passed": true,
+      "message": "Товар 2 доступен в нужном количестве.",
+      "checked_at": "2026-11-01T08:57:32.902943+00:00"
+    },
+    {
+      "check_result_id": 6,
+      "request_id": null,
+      "check_type_id": 3,
+      "order_item_id": 1,
+      "is_passed": true,
+      "message": "Весь состав заказа зарезервирован.",
+      "checked_at": "2026-11-01T08:57:32.902943+00:00"
+    },
+    {
+      "check_result_id": 7,
+      "request_id": null,
+      "check_type_id": 3,
+      "order_item_id": 2,
+      "is_passed": true,
+      "message": "Весь состав заказа зарезервирован.",
+      "checked_at": "2026-11-01T08:57:32.902943+00:00"
+    },
+    {
+      "check_result_id": 8,
+      "request_id": 102,
+      "check_type_id": 1,
+      "order_item_id": null,
+      "is_passed": true,
+      "message": "Данные заявки заполнены.",
+      "checked_at": "2026-11-01T08:58:04.953885+00:00"
+    },
+    {
+      "check_result_id": 9,
+      "request_id": null,
+      "check_type_id": 2,
+      "order_item_id": 3,
+      "is_passed": false,
+      "message": "Товар 3: требуется 2, доступно 1.",
+      "checked_at": "2026-11-01T08:58:04.953885+00:00"
+    },
+    {
+      "check_result_id": 10,
+      "request_id": 104,
+      "check_type_id": 1,
+      "order_item_id": null,
+      "is_passed": true,
+      "message": "Данные заявки заполнены.",
+      "checked_at": "2026-11-01T08:58:21.615551+00:00"
+    },
+    {
+      "check_result_id": 11,
+      "request_id": null,
+      "check_type_id": 2,
+      "order_item_id": 4,
+      "is_passed": true,
+      "message": "Товар 4 доступен в нужном количестве.",
+      "checked_at": "2026-11-01T08:58:21.615551+00:00"
+    },
+    {
+      "check_result_id": 12,
+      "request_id": null,
+      "check_type_id": 3,
+      "order_item_id": 4,
+      "is_passed": false,
+      "message": "Резервирование не выполнено: для одной или нескольких позиций нет единственной действующей цены.",
+      "checked_at": "2026-11-01T08:58:21.615551+00:00"
+    },
+    {
+      "check_result_id": 13,
+      "request_id": 103,
+      "check_type_id": 1,
+      "order_item_id": null,
+      "is_passed": false,
+      "message": "Не заполнено поле last_name. Не заполнено поле contact.",
+      "checked_at": "2026-11-02T06:48:43.054545+00:00"
     }
   ]
 }
