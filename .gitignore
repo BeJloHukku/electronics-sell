@@ -93,4 +93,4 @@ buildNumber.properties
 # Exclude wrapper jar from ignore
 !gradle/wrapper/gradle-wrapper.jar
 .idea
-
+out/
