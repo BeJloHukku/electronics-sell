@@ -1,0 +1,374 @@
+{
+  "clients": [
+    {
+      "client_id": 1,
+      "first_name": "Александр",
+      "middle_name": "Сергеевич",
+      "last_name": "Петров"
+    },
+    {
+      "client_id": 2,
+      "first_name": "Мария",
+      "middle_name": null,
+      "last_name": ""
+    }
+  ],
+  "emails": [
+    {
+      "email_id": 1,
+      "client_id": 1,
+      "email": "petrov@example.com"
+    }
+  ],
+  "phone_numbers": [
+    {
+      "phone_id": 1,
+      "client_id": 1,
+      "phone_number": "+7 900 111-22-33"
+    }
+  ],
+  "addresses": [
+    {
+      "address_id": 1,
+      "country": "Россия",
+      "city": "Москва",
+      "street": "Ленина",
+      "house": "5"
+    }
+  ],
+  "requests": [
+    {
+      "request_id": 101,
+      "client_id": 1,
+      "received_at": "2026-10-31T12:00:00+03:00",
+      "delivery_address_id": 1,
+      "status": "confirmed"
+    },
+    {
+      "request_id": 102,
+      "client_id": 1,
+      "received_at": "2026-10-31T12:00:00+03:00",
+      "delivery_address_id": 1,
+      "status": "rejected"
+    },
+    {
+      "request_id": 103,
+      "client_id": 2,
+      "received_at": "2026-10-31T12:00:00+03:00",
+      "delivery_address_id": 1,
+      "status": "needs_clarification"
+    },
+    {
+      "request_id": 104,
+      "client_id": 1,
+      "received_at": "2026-10-31T12:00:00+03:00",
+      "delivery_address_id": 1,
+      "status": "awaiting_price"
+    }
+  ],
+  "request_items": [
+    {
+      "request_item_id": 1,
+      "request_id": 101,
+      "product_id": 1,
+      "quantity": 1
+    },
+    {
+      "request_item_id": 2,
+      "request_id": 101,
+      "product_id": 2,
+      "quantity": 2
+    },
+    {
+      "request_item_id": 3,
+      "request_id": 102,
+      "product_id": 3,
+      "quantity": 2
+    },
+    {
+      "request_item_id": 4,
+      "request_id": 103,
+      "product_id": 1,
+      "quantity": 1
+    },
+    {
+      "request_item_id": 5,
+      "request_id": 104,
+      "product_id": 4,
+      "quantity": 1
+    }
+  ],
+  "products": [
+    {
+      "product_id": 1,
+      "name": "Стиральная машина X1",
+      "category": "Стиральные машины"
+    },
+    {
+      "product_id": 2,
+      "name": "Электрочайник B2",
+      "category": "Электрочайники"
+    },
+    {
+      "product_id": 3,
+      "name": "Холодильник C3",
+      "category": "Холодильники"
+    },
+    {
+      "product_id": 4,
+      "name": "Пылесос D4",
+      "category": "Пылесосы"
+    }
+  ],
+  "prices": [
+    {
+      "price_id": 1,
+      "product_id": 1,
+      "price_value": 5299000,
+      "valid_from": "2026-01-01T00:00:00+03:00",
+      "valid_to": "2026-10-01T00:00:00+03:00"
+    },
+    {
+      "price_id": 2,
+      "product_id": 1,
+      "price_value": 4999000,
+      "valid_from": "2026-10-01T00:00:00+03:00",
+      "valid_to": null
+    },
+    {
+      "price_id": 3,
+      "product_id": 2,
+      "price_value": 749000,
+      "valid_from": "2026-01-01T00:00:00+03:00",
+      "valid_to": null
+    },
+    {
+      "price_id": 4,
+      "product_id": 3,
+      "price_value": 7999000,
+      "valid_from": "2026-01-01T00:00:00+03:00",
+      "valid_to": null
+    }
+  ],
+  "stocks": [
+    {
+      "product_id": 1,
+      "available_quantity": 2,
+      "updated_at": "2026-11-01T08:57:32.902943+00:00"
+    },
+    {
+      "product_id": 2,
+      "available_quantity": 3,
+      "updated_at": "2026-11-01T08:57:32.902943+00:00"
+    },
+    {
+      "product_id": 3,
+      "available_quantity": 1,
+      "updated_at": "2026-10-31T12:00:00+03:00"
+    },
+    {
+      "product_id": 4,
+      "available_quantity": 2,
+      "updated_at": "2026-10-31T12:00:00+03:00"
+    }
+  ],
+  "orders": [
+    {
+      "order_id": 1,
+      "request_id": 101,
+      "status": "confirmed",
+      "created_at": "2026-11-01T08:57:32.902943+00:00",
+      "updated_at": "2026-11-01T08:57:32.902943+00:00"
+    },
+    {
+      "order_id": 2,
+      "request_id": 102,
+      "status": "rejected",
+      "created_at": "2026-11-01T08:58:04.953885+00:00",
+      "updated_at": "2026-11-01T08:58:04.953885+00:00"
+    },
+    {
+      "order_id": 3,
+      "request_id": 104,
+      "status": "awaiting_price",
+      "created_at": "2026-11-01T08:58:21.615551+00:00",
+      "updated_at": "2026-11-01T08:58:21.615551+00:00"
+    }
+  ],
+  "order_items": [
+    {
+      "order_item_id": 1,
+      "order_id": 1,
+      "request_item_id": 1,
+      "price": 4999000
+    },
+    {
+      "order_item_id": 2,
+      "order_id": 1,
+      "request_item_id": 2,
+      "price": 749000
+    },
+    {
+      "order_item_id": 3,
+      "order_id": 2,
+      "request_item_id": 3,
+      "price": null
+    },
+    {
+      "order_item_id": 4,
+      "order_id": 3,
+      "request_item_id": 5,
+      "price": null
+    }
+  ],
+  "reservations": [
+    {
+      "reservation_id": 1,
+      "order_item_id": 1,
+      "reserved_quantity": 1,
+      "reserved_at": "2026-11-01T08:57:32.902943+00:00"
+    },
+    {
+      "reservation_id": 2,
+      "order_item_id": 2,
+      "reserved_quantity": 2,
+      "reserved_at": "2026-11-01T08:57:32.902943+00:00"
+    }
+  ],
+  "check_types": [
+    {
+      "check_type_id": 1,
+      "code": "request_data",
+      "name": "Полнота данных заявки"
+    },
+    {
+      "check_type_id": 2,
+      "code": "stock",
+      "name": "Наличие товара"
+    },
+    {
+      "check_type_id": 3,
+      "code": "reservation",
+      "name": "Успешность резервирования"
+    }
+  ],
+  "check_results": [
+    {
+      "check_result_id": 1,
+      "request_id": 103,
+      "check_type_id": 1,
+      "order_item_id": null,
+      "is_passed": false,
+      "message": "Не заполнено поле last_name. Не заполнено поле contact.",
+      "checked_at": "2026-11-01T08:54:44.717967+00:00"
+    },
+    {
+      "check_result_id": 2,
+      "request_id": 103,
+      "check_type_id": 1,
+      "order_item_id": null,
+      "is_passed": false,
+      "message": "Не заполнено поле last_name. Не заполнено поле contact.",
+      "checked_at": "2026-11-01T08:55:21.070332+00:00"
+    },
+    {
+      "check_result_id": 3,
+      "request_id": 101,
+      "check_type_id": 1,
+      "order_item_id": null,
+      "is_passed": true,
+      "message": "Данные заявки заполнены.",
+      "checked_at": "2026-11-01T08:57:32.902943+00:00"
+    },
+    {
+      "check_result_id": 4,
+      "request_id": null,
+      "check_type_id": 2,
+      "order_item_id": 1,
+      "is_passed": true,
+      "message": "Товар 1 доступен в нужном количестве.",
+      "checked_at": "2026-11-01T08:57:32.902943+00:00"
+    },
+    {
+      "check_result_id": 5,
+      "request_id": null,
+      "check_type_id": 2,
+      "order_item_id": 2,
+      "is_passed": true,
+      "message": "Товар 2 доступен в нужном количестве.",
+      "checked_at": "2026-11-01T08:57:32.902943+00:00"
+    },
+    {
+      "check_result_id": 6,
+      "request_id": null,
+      "check_type_id": 3,
+      "order_item_id": 1,
+      "is_passed": true,
+      "message": "Весь состав заказа зарезервирован.",
+      "checked_at": "2026-11-01T08:57:32.902943+00:00"
+    },
+    {
+      "check_result_id": 7,
+      "request_id": null,
+      "check_type_id": 3,
+      "order_item_id": 2,
+      "is_passed": true,
+      "message": "Весь состав заказа зарезервирован.",
+      "checked_at": "2026-11-01T08:57:32.902943+00:00"
+    },
+    {
+      "check_result_id": 8,
+      "request_id": 102,
+      "check_type_id": 1,
+      "order_item_id": null,
+      "is_passed": true,
+      "message": "Данные заявки заполнены.",
+      "checked_at": "2026-11-01T08:58:04.953885+00:00"
+    },
+    {
+      "check_result_id": 9,
+      "request_id": null,
+      "check_type_id": 2,
+      "order_item_id": 3,
+      "is_passed": false,
+      "message": "Товар 3: требуется 2, доступно 1.",
+      "checked_at": "2026-11-01T08:58:04.953885+00:00"
+    },
+    {
+      "check_result_id": 10,
+      "request_id": 104,
+      "check_type_id": 1,
+      "order_item_id": null,
+      "is_passed": true,
+      "message": "Данные заявки заполнены.",
+      "checked_at": "2026-11-01T08:58:21.615551+00:00"
+    },
+    {
+      "check_result_id": 11,
+      "request_id": null,
+      "check_type_id": 2,
+      "order_item_id": 4,
+      "is_passed": true,
+      "message": "Товар 4 доступен в нужном количестве.",
+      "checked_at": "2026-11-01T08:58:21.615551+00:00"
+    },
+    {
+      "check_result_id": 12,
+      "request_id": null,
+      "check_type_id": 3,
+      "order_item_id": 4,
+      "is_passed": false,
+      "message": "Резервирование не выполнено: для одной или нескольких позиций нет единственной действующей цены.",
+      "checked_at": "2026-11-01T08:58:21.615551+00:00"
+    },
+    {
+      "check_result_id": 13,
+      "request_id": 103,
+      "check_type_id": 1,
+      "order_item_id": null,
+      "is_passed": false,
+      "message": "Не заполнено поле last_name. Не заполнено поле contact.",
+      "checked_at": "2026-11-02T06:48:43.054545+00:00"
+    }
+  ]
+}
