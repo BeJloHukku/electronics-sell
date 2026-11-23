@@ -1,4 +1,4 @@
-package ru.mirea.orders;
+package java.src.main.java.ru.mirea.orders;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;

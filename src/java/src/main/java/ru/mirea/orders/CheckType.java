@@ -1,4 +1,4 @@
-package ru.mirea.orders;
+package java.src.main.java.ru.mirea.orders;
 
 final class CheckType {
     private final long checkTypeId;

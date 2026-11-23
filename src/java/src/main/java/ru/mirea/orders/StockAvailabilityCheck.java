@@ -1,4 +1,4 @@
-package ru.mirea.orders;
+package java.src.main.java.ru.mirea.orders;
 
 import java.time.Instant;
 import java.util.ArrayList;

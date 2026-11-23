@@ -1,4 +1,4 @@
-package ru.mirea.orders;
+package java.src.main.java.ru.mirea.orders;
 
 final class PhoneNumber extends Contact {
     private final long phoneId;
